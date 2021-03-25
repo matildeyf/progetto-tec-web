@@ -1,0 +1,197 @@
+body{
+    background-color: rgb(228, 222, 222);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+header{
+    background-color: rgb(228, 222, 222);
+    height: 50px;
+    width: 100%;
+}
+
+a:link, a:visited {
+    background-color: rgb(209, 16, 16);
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+a:active{
+    background-color:grey;
+    color: white;
+}
+
+img {
+    margin-left: 18px;
+}
+
+
+h1.title {
+    color: black;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 1px rgb(209, 16, 16);
+    text-align: center;
+}
+
+h2.welcome {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(209, 16, 16);
+}
+
+h2.address {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+h3.address, h3.contacts {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+}
+
+div.wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    display:block;
+    margin:0px auto;
+}
+
+
+i.fas.fa-map-marker-alt, i.fas.fa-phone, i.fas.fa-mobile-alt, i.fas.fa-envelope {
+    font-size: 20px;
+    color:rgb(209, 16, 16);
+    margin-right: 3px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+ li {
+     display: inline;
+ }
+  
+li a {
+    display: block;
+    padding: 8px;
+    background-color:rgb(209, 16, 16);
+  }
+
+hr{
+    border: 1px;
+    border-style: solid;
+    border-color:rgb(209, 16, 16);
+}
+
+h2.ptitle {
+    color: rgb(209, 16, 16);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+
+p {
+    text-align: left;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+#sportclubby {
+    color: rgb(209, 16, 16);
+    background-color: rgb(228, 222, 222);
+    font-weight: bold;
+    display: inline;
+    text-align: justify;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: underline;
+}
+
+img.salapesi-container {
+    position: absolute;
+    width: 33.33%;
+    padding: 10px;
+}
+
+
+img.salacorsi {
+    margin:0px auto;
+}
+
+
+table, th, td {
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(209, 16, 16);
+    border-collapse: collapse;
+    text-align: center;    
+    
+}
+
+  th {
+      font-weight: bold;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+h3.service {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    margin-left: 20px;
+}
+
+i.fas.fa-user-md {
+    font-size: 30px;
+    color:rgb(209, 16, 16);
+    margin-left: 10px;
+}
+
+i.fas.fa-apple-alt {
+    font-size: 30px;
+    color:rgb(209, 16, 16);
+    margin-left: 10px;
+}
+
+i.fas.fa-laptop-medical {
+    font-size: 30px;
+    color:rgb(209, 16, 16);
+    margin-left: 10px;
+}
+
+i.fas.fa-spa {
+    font-size: 30px;
+    color:rgb(209, 16, 16);
+    margin-left: 10px;
+}
+
+

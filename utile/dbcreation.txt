@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS utenti_iscritti; -- se esiste la tabella utenti la distrugge ; prima distrugge poi ricrea
+
+
+CREATE TABLE utenti_iscritti (
+    nome varchar(50) NOT NULL,
+    cognome varchar(50) NOT NULL,
+    email varchar(50),
+    data_iscrizione date,
+    tipo_abbonamento varchar(15),
+    PRIMARY KEY(email)
+);
+
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Irene', 'Tudisco', 'irenetudisco@outlook.it', '2016-03-01', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Alice', 'Febbo', 'alicefebbo@outlook.it', '2013-03-04', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Federico', 'Terziano', 'federicoterziano@outlook.it', '2015-05-08', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Alessia', 'Nucifora', 'alessianucifora@outlook.it', '2019-06-07', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Patrizia', 'Lagro', 'patrizialagro@outlook.it', '2020-01-15', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Stefania', 'Lagro', 'stefanialagro@outlook.it', '2012-01-25', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Emanuele', 'Fragale', 'emanuelefragale@outlook.it', '2017-04-18', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Ivan', 'Franco', 'ivanfranco@outlook.it', '2015-05-10', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Roberto', 'Crobis', 'robertocrobis@outlook.it', '2020-03-10', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Denis', 'Tonda', 'denistonda@outlook.it', '2018-02-22', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Clara', 'Bosa', 'clarabosa@outlook.it', '2018-07-01', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Elena', 'Garda', 'elenagarda@outlook.it', '2019-04-18', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Angelo', 'Tassone', 'angelotassone@outlook.it', '2012-03-20', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Giuseppe', 'Stellato', 'giuseppestellato@outlook.it', '2018-09-10', 'sala corsi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Andrea', 'Motteran', 'andreamotteran@outlook.it', '2012-10-11', 'sala pesi');
+INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Sonia', 'Bagatin', 'soniabagatin@outlook.it', '2013-11-10', 'sala pesi');
+
