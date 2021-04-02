@@ -3,7 +3,7 @@ session_start();
 ?>
 <html>
   <head>
-  <link rel="stylesheet" href="style/style.css">       
+  <link rel="stylesheet" href="../style/style.css">       
   <title>Controllo login</title>
  </head>
 
@@ -20,7 +20,7 @@ echo "Non puoi accedere senza username e password!";
 // configure your username and password
 if($username == "Matilde" AND $password == "palestra"){
 echo "Ciao $username !";
-echo "<a href='src/private.php'>Clicca qui</a> per controllare la lista degli utenti iscritti alla palestra.";
+echo "<a href='private.php'>Clicca qui</a> per controllare la lista degli utenti iscritti alla palestra.";
 }else{
 echo "Accesso negato!";
 }

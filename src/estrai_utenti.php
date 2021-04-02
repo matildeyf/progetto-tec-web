@@ -1,10 +1,10 @@
 <?php
 
 //includo la classe utenti
-include("classe_utente.php");
+include("../include/classe_utente.php");
 
 //e includo la connessione al DB
-require("connessioneDButenti_palestra.php");
+require("../include/connessioneDButenti_palestra.php");
 if ($erroreDB != "") {   //se il DB da errore o da errore la connessione con il DBMS stampo il messaggio di errore sulla pagina con echo
     echo $erroreDB;
 }

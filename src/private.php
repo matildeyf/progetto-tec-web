@@ -4,7 +4,7 @@ session_start();
 
 <?php
 
-require("include/connessioneDButenti_palestra.php");
+require("../include/connessioneDButenti_palestra.php");
 
 
 $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbonamento FROM utenti_iscritti");
@@ -25,13 +25,13 @@ $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbo
   <!-- Link Bootstrap --> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Link foglio di stile --> 
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="../style/style.css">
   </head>
 
 
   <body>
     <header>
-       <img src="Logo.jpg" title="logo" alt="logo" width="200px" height="80px">
+       <img src="../img/Logo.jpg" title="logo" alt="logo" width="200px" height="80px">
     </header>
 
   <br>
@@ -70,7 +70,7 @@ $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbo
 <br>
 
     <div>
-      <a href="src/logout.php">Logout</a>
+      <a href="logout.php">Logout</a>
     </div>
      
     

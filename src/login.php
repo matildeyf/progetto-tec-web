@@ -12,7 +12,7 @@
      <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- link al foglio di stile css --> 
-    <link rel="stylesheet" href="style/formstyle.css">
+    <link rel="stylesheet" href="../style/formstyle.css">
 
     <!-- Javascript -->
     <script>   
@@ -25,7 +25,7 @@
 
 <body>
 
-<form METHOD="POST" ACTION="src/controllalogin.php" id="mioform" target="_blank">
+<form METHOD="POST" ACTION="controllalogin.php" id="mioform" target="_blank">
 <div class="container">   <!-- contenitore larghezza fissa --> 
   <div class="row">
     <div class="col-lg-3 col-md-2"></div>
