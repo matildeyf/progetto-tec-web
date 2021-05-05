@@ -1,6 +1,6 @@
 <?php
 
-class Dao {
+class Dao { //DAO = Data Access Object
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";

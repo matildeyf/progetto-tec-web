@@ -61,10 +61,6 @@ session_start();
                 "<td>" . $user->getTipo_abbonamento() . "</td></tr>";
          }
          ?>
-
-         <script>
-            //RIPRENDI DA QUIII, l'idea e' di sostituire la roba sopra e utilizzare js per stampare dinamicamente le cards
-         </script>
     </tbody>
   </table>
 </div>
