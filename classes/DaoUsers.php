@@ -15,4 +15,23 @@ class DaoUsers extends Dao {
 
         return $users;
     }
+
+// esempio di insert:
+// INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Irene', 'Tudisco', 'irenetudisco@outlook.it', '2016-03-01', 'sala pesi');
+    public function addUser($user) {
+        $sql = "insert into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values(" .
+                $user->getNome() .
+                "" .
+                "" .; //TODO finire l'inserimento con tutti i parametri dell'utente. FILTRARE INPUT PER sql injections
+
+        // esecuzione della query
+    }
+
+    public function removeUser($email) {
+        //TODO $sql = ;
+    }
+
+    public function modifyUser($email, $user) { //questa operazione e' opzionale
+        //TODO
+    }
 }
