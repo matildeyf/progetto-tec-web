@@ -4,27 +4,22 @@ session_start();
 
 <?php
 
-require("../include/connessioneDButenti_palestra.php");
+  require("../classes/DaoUsers.php");
 
-
-$resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbonamento FROM utenti_iscritti");
-
-  $table="";  //creo la variabile tabella e la inizializzo a stringa vuota
-  while($row = $resultSet->fetch(PDO::FETCH_ASSOC)) {
-    $table.= "<tr><td>".$row["nome"]."</td><td>".$row["cognome"]."</td><td> ".$row["email"]."</td><td>".$row["data_iscrizione"]."</td><td>".$row["tipo_abbonamento"]."</td></tr>";
-  }
+  $DAO_Users = new DaoUsers();
+  $user_list = $DAO_Users->getUsers();
 ?>
 
 
 <html>
   <head>
   <title>Area riservata</title>
-  
+
   <meta charset="utf-8">
-  
-  <!-- Link Bootstrap --> 
+
+  <!-- Link Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Link foglio di stile --> 
+  <!-- Link foglio di stile -->
   <link rel="stylesheet" href="../style/style.css">
   </head>
 
@@ -43,7 +38,7 @@ $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbo
     </h2>
     </div>
   <br>
-  <div class="container-sm">    
+  <div class="container-sm">
 
   <table class="table table-dark table-hover">
 
@@ -57,9 +52,19 @@ $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbo
       </tr>
     </thead>
     <tbody>
-         <?php 
-         echo $table;
+         <?php
+         foreach($user_list as $user) {
+           echo "<tr><td>" . $user->getNome() . "</td>" .
+                "<td>" . $user->getCognome() . "</td>" .
+                "<td>" . $user->getEmail() . "</td>" .
+                "<td>" . $user->getData_iscrizione() . "</td>" .
+                "<td>" . $user->getTipo_abbonamento() . "</td></tr>";
+         }
          ?>
+
+         <script>
+            //RIPRENDI DA QUIII, l'idea e' di sostituire la roba sopra e utilizzare js per stampare dinamicamente le cards
+         </script>
     </tbody>
   </table>
 </div>
@@ -72,6 +77,6 @@ $resultSet = $db->query("SELECT nome, cognome, email, data_iscrizione, tipo_abbo
     <div>
       <a href="logout.php">Logout</a>
     </div>
-     
-    
+
+
 </html>
