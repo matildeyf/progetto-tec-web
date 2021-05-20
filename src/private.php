@@ -59,11 +59,41 @@ session_start();
                 "<td>" . $user->getEmail() . "</td>" .
                 "<td>" . $user->getData_iscrizione() . "</td>" .
                 "<td>" . $user->getTipo_abbonamento() . "</td></tr>";
-         }
+         } 
          ?>
     </tbody>
   </table>
+
+<!-- PROVARE A FARE FORM PER INSERIRE CANCELLARE -->
+
+<div>
+
+
 </div>
+
+        <?php
+        //  $DAO_Users->addUser(new Utente("MARIO", "ROSSI", "MARIOROSSI@OUTLOOK.IT", "2020-08-14", "PROVA"));
+        $DAO_Users->removeUser("MARIOROSSI@OUTLOOK.IT");
+       ?>
+</div>
+   <form name="utente" action="private.php">
+   <p>Inserisci un nuovo utente</p>
+      <label for="nome">Nome:</label><br>
+         <input type="text" id="nome" name="nome" required><br>
+      <label for="cognome">Cognome:</label><br>
+         <input type="text" id="cognome" name="cognome" required><br><br>
+      <label for="email">Email:</label><br>
+         <input type="email" id="email" name="email" required><br><br>
+      <label for="data_iscrizione">Data iscrizione:</label><br>
+         <input type="date" id="data_iscrizione" name="data_iscrizione" required><br><br>
+      <label for="tipo_abbonamento">Tipo abbonamento:</label><br>
+         <input type="radio" id="sala_corsi" name="sala_corsi" value="sala_corsi" required>
+           <label for="sala_corsi">Sala corsi</label><br>
+         <input type="radio" id="sala_pesi" name="sala_pesi" value="sala_pesi" required>
+           <label for="sala_pesi">Sala pesi</label><br>
+    <input type="button" id="button" value="Seleziona">
+    </action=> 
+   </form>
 </div>
 
 <br>

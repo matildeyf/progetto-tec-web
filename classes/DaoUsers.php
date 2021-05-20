@@ -16,22 +16,43 @@ class DaoUsers extends Dao {
         return $users;
     }
 
-// esempio di insert:
-// INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('Irene', 'Tudisco', 'irenetudisco@outlook.it', '2016-03-01', 'sala pesi');
-    public function addUser($user) {
-        $sql = "insert into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values(" .
-                $user->getNome() .
-                "" .
-                "" .; //TODO finire l'inserimento con tutti i parametri dell'utente. FILTRARE INPUT PER sql injections
+// TODO proteggere sql injections
+ 
+    public function addUser($user) {  //funzione addUser su un oggetto utente
+        $sql = " INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('" .  //creo la query
+                 $user->getNome() . "', '" .  //funzioni concatenate che ritornano stringhe
+                 $user->getCognome() . "', '" .
+                 $user->getEmail() . "', '" .
+                 $user->getData_iscrizione() . "', '" .
+                 $user->getTipo_abbonamento() . "');"; 
+       
+        $resultSet = $this->connect()->query($sql);  //eseguo la query
 
-        // esecuzione della query
+        if($resultSet){
+            echo("<br>Inserimento avvenuto correttamente");
+        } 
+        else{
+            echo("<br>Inserimento non eseguito");
+        }
     }
 
     public function removeUser($email) {
-        //TODO $sql = ;
+        $sql = " DELETE from utenti_iscritti WHERE email = '" . $email . "' "; 
+        $resultSet = $this->connect()->query($sql);
+
+        if($resultSet){
+            echo("<br>Cancellazione avvenuta correttamente");
+        } 
+        else{
+            echo("<br>Cancellazione non eseguita");
+        }
     }
 
     public function modifyUser($email, $user) { //questa operazione e' opzionale
         //TODO
     }
 }
+
+
+
+
