@@ -59,7 +59,7 @@ session_start();
                 "<td>" . $user->getEmail() . "</td>" .
                 "<td>" . $user->getData_iscrizione() . "</td>" .
                 "<td>" . $user->getTipo_abbonamento() . "</td></tr>";
-         } 
+         }
          ?>
     </tbody>
   </table>
@@ -73,26 +73,30 @@ session_start();
 
         <?php
         //  $DAO_Users->addUser(new Utente("MARIO", "ROSSI", "MARIOROSSI@OUTLOOK.IT", "2020-08-14", "PROVA"));
-        $DAO_Users->removeUser("MARIOROSSI@OUTLOOK.IT");
+        //$DAO_Users->removeUser("MARIOROSSI@OUTLOOK.IT");
+          if(isset($_GET["submit"])) {
+            echo "OK";
+          } else {
+            echo "NO";
+          }
        ?>
 </div>
-   <form name="utente" action="private.php">
+   <form name="utente" action="private.php" method="get">
    <p>Inserisci un nuovo utente</p>
       <label for="nome">Nome:</label><br>
-         <input type="text" id="nome" name="nome" required><br>
+      <input type="text" id="nome" name="nome" required><br>
       <label for="cognome">Cognome:</label><br>
-         <input type="text" id="cognome" name="cognome" required><br><br>
+      <input type="text" id="cognome" name="cognome" required><br><br>
       <label for="email">Email:</label><br>
-         <input type="email" id="email" name="email" required><br><br>
+      <input type="email" id="email" name="email" required><br><br>
       <label for="data_iscrizione">Data iscrizione:</label><br>
-         <input type="date" id="data_iscrizione" name="data_iscrizione" required><br><br>
+      <input type="date" id="data_iscrizione" name="data_iscrizione" required><br><br>
       <label for="tipo_abbonamento">Tipo abbonamento:</label><br>
-         <input type="radio" id="sala_corsi" name="sala_corsi" value="sala_corsi" required>
-           <label for="sala_corsi">Sala corsi</label><br>
-         <input type="radio" id="sala_pesi" name="sala_pesi" value="sala_pesi" required>
-           <label for="sala_pesi">Sala pesi</label><br>
-    <input type="button" id="button" value="Seleziona">
-    </action=> 
+      <input type="radio" id="sala_corsi" name="tipo_iscrizione" value="sala_corsi">
+      <label for="sala_corsi">Sala corsi</label><br>
+      <input type="radio" id="sala_pesi" name="tipo_iscrizione" value="sala_pesi">
+      <label for="sala_pesi">Sala pesi</label><br>
+      <input type="submit" id="submit" name="sumbit" value="Seleziona">
    </form>
 </div>
 
