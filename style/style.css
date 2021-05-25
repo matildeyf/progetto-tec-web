@@ -194,4 +194,18 @@ i.fas.fa-spa {
     margin-left: 10px;
 }
 
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(209, 16, 16);
+    border-radius: 4px;
+  }
+
+  input:focus {
+    border: 3px solid #555;
+  }
+
+
 

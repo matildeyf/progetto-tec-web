@@ -42,7 +42,7 @@ session_start();
 
   <table class="table table-dark table-hover">
 
-    <thead>
+    <thead></thead>
       <tr>
         <th>Nome</th>
         <th>Cognome</th>
@@ -52,6 +52,7 @@ session_start();
       </tr>
     </thead>
     <tbody>
+
          <?php
          foreach($user_list as $user) {
            echo "<tr><td>" . $user->getNome() . "</td>" .
@@ -63,30 +64,31 @@ session_start();
          ?>
     </tbody>
   </table>
+<br>
+<br>
+<br>
 
 <!-- PROVARE A FARE FORM PER INSERIRE CANCELLARE -->
-
-<div>
-
-
-</div>
 
         <?php
         //  $DAO_Users->addUser(new Utente("MARIO", "ROSSI", "MARIOROSSI@OUTLOOK.IT", "2020-08-14", "PROVA"));
         //$DAO_Users->removeUser("MARIOROSSI@OUTLOOK.IT");
         if(isset( $_GET['seleziona'])) {
           // catturiamo i dati inviati dalla GET
-          echo "Ciao " . $_GET['nome'];
+
           $DAO_Users->addUser(new Utente($_GET['nome'], $_GET['cognome'],
                                          $_GET['email'], $_GET['data_iscrizione'],
                                          $_GET['tipo_abbonamento']));
-          echo "HO AGGIUNTO " . $_GET['nome'] . " al database!";
+          echo "Ho aggiunto " . $_GET['nome'] . " alla tabella!";
         }
        ?>
-</div>
+
+<div>
+  <p>
+  <h2 class="ptitle">Compila il form per aggiungere un utente:</h2>
    <form action="private.php" method="get">
      <label for="nome">Nome:</label></br>
-     <input type="text" name="nome"/></br></br>
+     <input type="text" id="nome" name="nome"/></br></br>
      <label for="cognome">Cognome:</label><br>
      <input type="text" id="cognome" name="cognome" required><br><br>
      <label for="email">Email:</label><br>
@@ -101,12 +103,33 @@ session_start();
      <input type="submit" name="seleziona"/>
    </form>
 </div>
+  </p>
+        <?php
 
+        if(isset( $_GET['cancella'])) {    
+          // catturiamo i dati inviati dalla GET
+
+          $DAO_Users->removeUser($_GET['email']);
+        }
+       ?>
 <br>
 <br>
 <br>
 
-    <div>
+<div>
+  <p>
+  <h2 class="ptitle">Compila il form per rimuovere un utente:</h2>
+   <form action="private.php" method="get">
+     <label for="email">Email:</label><br>
+     <input type="email" id="email" name="email" required><br><br>
+     <input type="submit" name="cancella"/>
+   </form>
+</div>
+</p>
+<br>
+<br>
+
+<div class="container-sm">
       <a href="logout.php">Logout</a>
     </div>
 
