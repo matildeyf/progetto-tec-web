@@ -17,32 +17,35 @@ class DaoUsers extends Dao {
     }
 
 // TODO proteggere sql injections
- 
+
     public function addUser($user) {  //funzione addUser su un oggetto utente
         $sql = " INSERT into utenti_iscritti (nome, cognome, email, data_iscrizione, tipo_abbonamento) values('" .  //creo la query
                  $user->getNome() . "', '" .  //funzioni concatenate che ritornano stringhe
                  $user->getCognome() . "', '" .
                  $user->getEmail() . "', '" .
                  $user->getData_iscrizione() . "', '" .
-                 $user->getTipo_abbonamento() . "');"; 
-       
+                 $user->getTipo_abbonamento() . "');";
+
         $resultSet = $this->connect()->query($sql);  //eseguo la query
 
         if($resultSet){
             echo("<br>Inserimento avvenuto correttamente");
-        } 
+        }
         else{
             echo("<br>Inserimento non eseguito");
         }
     }
 
-    public function removeUser($email) {
-        $sql = " DELETE from utenti_iscritti WHERE email = '" . $email . "' "; 
-        $resultSet = $this->connect()->query($sql);
 
-        if($resultSet){
-            echo("<br>Cancellazione avvenuta correttamente");
-        } 
+    public function removeUser($email) {
+        $sql = "DELETE from utenti_iscritti WHERE email = :email";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":email", $email);
+        $stmt->execute();
+
+        if($stmt){
+            echo("<br>Cancellazione avvenuta correttamente!!!");
+        }
         else{
             echo("<br>Cancellazione non eseguita");
         }
@@ -52,7 +55,3 @@ class DaoUsers extends Dao {
         //TODO
     }
 }
-
-
-
-
